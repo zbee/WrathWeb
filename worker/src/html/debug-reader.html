@@ -70,21 +70,23 @@
 <body>
     <div class="card">
         <h1>Debug Reader</h1>
-        <p class="note">Upload a debug file or paste the content to view the configuration JSON.</p>
+        <p class="note">Upload or Paste a Wrath Debug File to view the configuration JSON.</p>
         <form method="POST" enctype="multipart/form-data">
             <div class="row">
                 <label><strong>Paste Debug File Contents:</strong></label><br>
-                <textarea name="textInput" placeholder="Complete Debug File Contents here"></textarea>
+                <textarea name="textInput"
+                placeholder="Complete Debug File Contents here
+(Ensure that START and END DEBUG CODE are included)"></textarea>
             </div>
             <div class="row">
-                <label><strong>Or Upload Debug (WrathDebug.txt):</strong></label><br>
+                <label><strong>Or Upload Debug File:</strong></label><br>
                 <input type="file" name="fileInput" accept=".txt">
             </div>
             <div class="controls">
                 <button type="submit">Read Configuration</button>
                 <button type="button" class="secondary" onclick="document.querySelector('textarea').value=''">Clear</button>
             </div>
-            <p class="footer-note">Output will be shown as JSON. Ensure the pasted content includes the START and END DEBUG CODE markers.</p>
+            <p class="footer-note">Output will be shown as JSON.</p>
         </form>
     </div>
 </body>
